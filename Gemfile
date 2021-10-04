@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.0.2'
+ruby '2.7.3'
 
 gem 'sinatra'
-gem 'webrick'
+gem 'sinatra-reloader', '~> 1.0'
