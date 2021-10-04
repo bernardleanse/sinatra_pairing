@@ -11,5 +11,5 @@ get '/secret' do
 end
 
 get '/cats' do
-  File.read('views/cats.erb')
+  erb(:index)
 end
