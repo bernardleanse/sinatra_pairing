@@ -1,11 +1,4 @@
-<head></head>
-<body>
-  <div style="border: 5px dashed red; width: 400px">
-    <img src="https://i.imgur.com/jFaSxym.png" width=400px >
-  </div>
-  <h1>My name is <%=@name%></h1>
-  <p1>I am <%=@age%> years old</p1>
-  <form action="/name-form">
+<form action="/name-form" method="post">
     <ul>
       <li>
         <% unless @name %>
@@ -24,4 +17,3 @@
     </ul>
 
   </form>
-<body>

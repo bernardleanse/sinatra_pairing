@@ -3,7 +3,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 get '/' do
-  "Hello World"
+  "Hello World" #this is the response when user send GET to /
 end
 
 get '/secret' do
@@ -21,4 +21,9 @@ get '/named-cats' do
   @age = params[:age]
    #could go %w(Amigo Misty Almond)
   erb(:index)
+end
+
+get '/cat-form' do
+  erb(:cat_form)
+
 end
