@@ -17,7 +17,7 @@ end
 
 get '/named-cats' do
   puts params
-  @name = params[:name] 
+  @name = params[:name] #params = converts a query string into a hash with gets.
   @age = params[:age]
    #could go %w(Amigo Misty Almond)
   erb(:index)
@@ -25,5 +25,10 @@ end
 
 get '/cat-form' do
   erb(:cat_form)
-
 end
+
+post '/named-cat' do
+  p params  # params represents key value pair submitted
+  @name = params[:name]
+  erb :index
+end 
