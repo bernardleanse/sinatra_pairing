@@ -1,2 +1,27 @@
-<img src="https://i.imgur.com/jFaSxym.png" width="400" style="border:5px dashed red">
-<h1>My name is <%=["Amigo", "Misty", "Almond"][rand(3)]%></h1>
+<head></head>
+<body>
+  <div style="border: 5px dashed red; width: 400px">
+    <img src="https://i.imgur.com/jFaSxym.png" width=400px >
+  </div>
+  <h1>My name is <%=@name%></h1>
+  <p1>I am <%=@age%> years old</p1>
+  <form action="/named-cats">
+    <ul>
+      <li>
+        <% unless @name %>
+          <label for="name">Enter Cat Name:</label>
+          <input type='text' name='name'>
+        
+        <% end %>
+      </li>
+      <li>
+        <% unless @age %>
+          <label for="name">Enter Cat Age:</label>
+            <input type='text' name='age'>
+            <input type='submit' value='Submit'>
+          </li>
+        <% end %>
+    </ul>
+
+  </form>
+<body>
